@@ -17,3 +17,9 @@ sudo apt install php7.4
 ```
 sudo update-alternatives --config php
 ```
+
+
+# Composer
+```
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && php composer-setup.php && php -r "unlink('composer-setup.php');" && sudo mv composer.phar /usr/local/bin/composer
+```
