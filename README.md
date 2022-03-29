@@ -5,6 +5,6 @@
 ```
     protected function passwordRules()
     {
-        return ['required', 'string', (new Password)->length(6), 'confirmed'];
+        return ['required', 'string', (new Password)->length(6)->requireUppercase()->requireNumeric()->requireSpecialCharacter(), 'confirmed'];
     }
 ```
