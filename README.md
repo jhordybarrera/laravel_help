@@ -12,3 +12,8 @@ sudo apt install php7.4
         return ['required', 'string', (new Password)->length(6)->requireUppercase()->requireNumeric()->requireSpecialCharacter(), 'confirmed'];
     }
 ```
+
+## Cambiar version de php cli
+```
+sudo update-alternatives --config php
+```
