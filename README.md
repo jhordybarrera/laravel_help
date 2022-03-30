@@ -33,3 +33,13 @@ if [ -d "$HOME/.config/composer/vendor/bin" ] ; then
     PATH="$HOME/.config/composer/vendor/bin:$PATH"
 fi
 ```
+
+## Crear proyecto laravel usando composer
+```
+composer create-project laravel/laravel proyectogenial
+```
+
+## Permisos de directorio
+```
+sudo chown -R $USER:www-data storage/ && sudo chown -R $USER:www-data bootstrap/cache/ && sudo chmod -R 775 storage/ && sudo chmod -R 775 bootstrap/cache/
+```
