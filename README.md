@@ -43,3 +43,18 @@ composer create-project laravel/laravel proyectogenial
 ```
 sudo chown -R $USER:www-data storage/ && sudo chown -R $USER:www-data bootstrap/cache/ && sudo chmod -R 775 storage/ && sudo chmod -R 775 bootstrap/cache/
 ```
+
+## Laravel Validación Español
+
+
+```
+composer require laravel-lang/lang --dev
+```
+
+```
+cp -r vendor/laravel-lang/lang/locales/es/ resources/lang/
+```
+
+```
+cp resources/lang/es/es.json resources/lang/
+```
