@@ -34,6 +34,11 @@ if [ -d "$HOME/.config/composer/vendor/bin" ] ; then
 fi
 ```
 
+# Laravel instalador global
+```
+composer global require laravel/installer
+```
+
 ## Crear proyecto laravel usando composer
 ```
 composer create-project laravel/laravel proyectogenial
