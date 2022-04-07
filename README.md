@@ -62,6 +62,18 @@ php artisan jetstream:install livewire
 npm install && npm run dev && php artisan migrate
 ```
 
+```
+php artisan vendor:publish --tag=jetstream-views
+```
+
+```
+php artisan storage:link
+```
+
+**Fotos de perfil**
+> Descomentar la linea Features::profilePhotos() en config/jetstream.php
+
+
 ## Laravel Español
 
 
