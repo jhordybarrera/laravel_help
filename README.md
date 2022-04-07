@@ -49,6 +49,21 @@ composer create-project laravel/laravel proyectogenial
 sudo chown -R $USER:www-data storage/ && sudo chown -R $USER:www-data bootstrap/cache/ && sudo chmod -R 775 storage/ && sudo chmod -R 775 bootstrap/cache/
 ```
 
+## Laravel jetstream
+```
+composer require laravel/jetstream
+```
+
+```
+php artisan jetstream:install livewire
+```
+
+```
+npm install
+npm run dev
+php artisan migrate
+```
+
 ## Laravel Español
 
 
