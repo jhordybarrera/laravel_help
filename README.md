@@ -49,7 +49,7 @@ composer create-project laravel/laravel proyectogenial
 sudo chown -R $USER:www-data storage/ && sudo chown -R $USER:www-data bootstrap/cache/ && sudo chmod -R 775 storage/ && sudo chmod -R 775 bootstrap/cache/
 ```
 
-## Laravel Validación Español
+## Laravel Español
 
 
 ```
@@ -62,4 +62,29 @@ cp -r vendor/laravel-lang/lang/locales/es/ resources/lang/
 
 ```
 cp resources/lang/es/es.json resources/lang/
+```
+
+
+## Laravel Google Captcha V2
+```
+composer require buzz/laravel-google-captcha
+```
+```
+php artisan vendor:publish --provider="Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider"
+```
+
+**Configuración .env**
+```
+CAPTCHA_SECRET=[secret-key]
+CAPTCHA_SITEKEY=[site-key]
+```
+
+**Mostrar captcha en formulario blade**
+```
+{!! app('captcha')->display() !!}
+```
+
+**Añadir la regla de validación**
+```
+'g-recaptcha-response' => 'required|captcha'
 ```
