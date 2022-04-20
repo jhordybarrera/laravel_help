@@ -100,8 +100,8 @@ php artisan vendor:publish --provider="Buzz\LaravelGoogleCaptcha\CaptchaServiceP
 
 **Configuración .env**
 ```
-CAPTCHA_SECRET=[secret-key]
 CAPTCHA_SITEKEY=[site-key]
+CAPTCHA_SECRET=[secret-key]
 ```
 
 **Mostrar captcha en formulario blade**
