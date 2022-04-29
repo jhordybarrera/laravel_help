@@ -1,8 +1,14 @@
 #!/bin/bash
+ENDCOLOR="\e[0m"
+YELLOW="\e[33m"
+RED="\e[31m"
+GREEN="\e[32m"
 directory=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd -P )
 filename='.env'
 backupdir='backup'
 cd $directory
+
+
 if [[ -f "$filename" ]]; then
     while read line; do
         if [[ "$line" == *"DB_DATABASE"* ]]; then
@@ -20,19 +26,21 @@ if [[ -f "$filename" ]]; then
         echo "Error leyendo los datos"
     else
         if [ -d "$backupdir" ]; then
+            pw=${pw//\"/}
             mysqldump -h localhost --user=$un --password=$pw --databases $db  > $directory/$backupdir/$db.sql;
-            echo "Backup mysql realizado correctamente"
+            # echo "mysqldump -h localhost --user=$un --password=$pw --databases $db  > $directory/$backupdir/$db.sql"
+            echo -e "${YELLOW}Backup mysql realizado correctamente${ENDCOLOR}"
         else
-            echo "Error: Directorio '$backupdir' no existe."
+            echo -e "${RED}Error: Directorio '$backupdir' no existe.${ENDCOLOR}"
         fi
         git add .;
         git commit -m "Backup automatico: $(date +%c)";
         git pull origin main;
         git push origin main;
-        echo "Git pull y push realizado correctamente"
+        echo -e "${YELLOW}Git pull y push realizado correctamente${ENDCOLOR}"
     fi
 else
-    echo "El archivo '$filename' no existe en '$directory', no se realizó ninguna acción";
+    echo -e "${RED}El archivo '$filename' no existe en '$directory', no se realizó ninguna acción${ENDCOLOR}";
 fi
 
-echo "Gracias por usar, https://github.com/jbarreraballestas"
+echo -e "${GREEN}Gracias por usar, https://github.com/jbarreraballestas${ENDCOLOR}"
