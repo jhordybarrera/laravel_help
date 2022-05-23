@@ -73,6 +73,27 @@ php artisan storage:link
 **Fotos de perfil**
 > Descomentar la linea Features::profilePhotos() en config/jetstream.php
 
+## Jetstrap (requiere jetstream)
+
+```
+composer require nascent-africa/jetstrap --dev
+```
+
+```
+php artisan jetstrap:swap livewire
+```
+
+```
+npm install && npm run dev
+```
+
+```
+npm install && npm run dev
+```
+
+```
+php artisan migrate
+```
 
 ## Laravel Español
 
