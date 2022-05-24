@@ -31,7 +31,8 @@ if [[ -f "$filename" ]]; then
             # echo "mysqldump -h localhost --user=$un --password=$pw --databases $db  > $directory/$backupdir/$db.sql"
             echo -e "${YELLOW}Backup mysql realizado correctamente${ENDCOLOR}"
         else
-            echo -e "${RED}Error: Directorio '$backupdir' no existe.${ENDCOLOR}"
+            echo -e "${RED}Directorio '$backupdir' no existe, será creado.${ENDCOLOR}"
+            mkdir $backupdir
         fi
         git add .;
         git commit -m "Backup automatico: $(date +%c)";
