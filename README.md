@@ -113,7 +113,7 @@ cp resources/lang/es/es.json resources/lang/
 
 ## Laravel Google Captcha V2
 
-[biscolab-laravel-recaptcha](https://laravel-recaptcha-docs.biscolab.com/ "Title")
+[biscolab-laravel-recaptcha](https://laravel-recaptcha-docs.biscolab.com/ "Biscolab Laravel Recaptcha")
 
 ```
 composer require buzz/laravel-google-captcha
