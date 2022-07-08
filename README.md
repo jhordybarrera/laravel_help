@@ -110,6 +110,17 @@ cp -r vendor/laravel-lang/lang/locales/es/ resources/lang/
 cp resources/lang/es/es.json resources/lang/
 ```
 
+## Fechas en español colombia
+**AppServiceProvider boot() method**
+```
+setLocale(LC_TIME,'es_CO.utf8');
+Carbon::setLocale(LC_TIME,'es_CO.utf8');
+Carbon::setUTF8(true);
+```
+**Mes de creación en español**
+```
+$this->created_at->formatLocalized('%B');
+```
 
 ## Laravel Google Captcha V2
 
