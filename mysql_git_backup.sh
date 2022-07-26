@@ -7,7 +7,11 @@ directory=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd -P 
 filename='.env'
 backupdir='backup'
 cd $directory
-
+if [ -d "$backupdir" ]; then
+else
+    echo -e "${RED}Directorio '$backupdir' no existe, será creado.${ENDCOLOR}"
+    mkdir $backupdir
+fi
 
 if [[ -f "$filename" ]]; then
     while read line; do
