@@ -1,4 +1,4 @@
-# Create new laravel 9 project with react
+# Create new laravel 9 project with react and vite (Not tested on Mix)
 ```
  composer create-project laravel/laravel LaraReact
 ```
@@ -18,7 +18,7 @@ import ReactDOM from "react-dom/client";
 
 export default function Welcome() {
   return (
-    <div>Welcome</div>
+    <div>Welcome from React</div>
   )
 }
 
@@ -50,3 +50,14 @@ import './components/Welcome'
     </body>
 </html>
 ```
+
+# Ok, you are ready for production (Or maybe not, npm run dev)
+```
+npm run build
+```
+# Run
+```
+php artisan serve
+```
+
+# Thanks!
