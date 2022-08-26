@@ -103,7 +103,7 @@ composer require laravel-lang/lang --dev
 ```
 
 ```
-cp -r vendor/laravel-lang/lang/ resources/lang/
+cp -r vendor/laravel-lang/lang/ resources/
 ```
 
 ```
