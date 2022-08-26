@@ -107,7 +107,7 @@ cp -r vendor/laravel-lang/lang/ resources/
 ```
 
 ```
-cp resources/lang/es/es.json resources/lang/
+cp resources/lang/es/json.json resources/lang/
 ```
 
 ## Fechas en español colombia
