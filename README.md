@@ -95,20 +95,6 @@ npm install && npm run dev
 php artisan migrate
 ```
 
-## Laravel Español
-
-
-```
-composer require laravel-lang/lang --dev
-```
-
-```
-cp -r vendor/laravel-lang/lang/ resources/
-```
-
-```
-cp resources/lang/es/json.json resources/lang/
-```
 
 ## Fechas en español colombia
 **AppServiceProvider boot() method**
