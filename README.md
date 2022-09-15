@@ -46,7 +46,7 @@ composer create-project laravel/laravel proyectogenial
 
 ## Permisos de directorio
 ```
-sudo chown -R www-data:www-data storage/ && sudo chown -R www-data:www-data bootstrap/cache/ && sudo chmod -R 775 storage/ && sudo chmod -R 775 bootstrap/cache/
+sudo chown -R $USER:www-data storage bootstrap/cache/ && sudo chmod -R 775 storage bootstrap/cache/
 ```
 
 ## Laravel jetstream
