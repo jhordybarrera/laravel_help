@@ -42,7 +42,6 @@ if [[ -f "$filename" ]]; then
         git add .;
         git commit -m "Backup automatico: $(date +%c)";
         git push origin main;
-        echo -e "${YELLOW}Git pull y push realizado correctamente${ENDCOLOR}"
     fi
 else
     echo -e "${RED}El archivo '$filename' no existe en '$directory', no se realizó ninguna acción${ENDCOLOR}";
