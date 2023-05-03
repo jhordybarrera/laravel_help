@@ -41,7 +41,6 @@ if [[ -f "$filename" ]]; then
         fi
         git add .;
         git commit -m "Backup automatico: $(date +%c)";
-        git pull origin main;
         git push origin main;
         echo -e "${YELLOW}Git pull y push realizado correctamente${ENDCOLOR}"
     fi
