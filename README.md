@@ -51,7 +51,7 @@ sudo chown -R $USER:www-data storage bootstrap/cache/ && sudo chmod -R 775 stora
 ```
 ## Permisos sqlite
 ```
-sudo chown -R $USER:www-data database/database* && sudo chmod -R 775 database/database*
+sudo chown -R $USER:www-data database && sudo chmod -R 775 database
 ```
 ## Laravel jetstream
 ```
