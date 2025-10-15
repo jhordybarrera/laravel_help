@@ -1,8 +1,6 @@
 # laravel
 ## PHP
-```
-sudo apt install php7.4
-```
+<a href="https://github.com/jhordybarrera/ubuntu_server_configuration?tab=readme-ov-file#instalar-php" target="_blank">Instalar php en ubuntu</a>
 
 ## Reglas de validación de contraseña
 > app/Actions/Fortify/PasswordValidationRules.php
