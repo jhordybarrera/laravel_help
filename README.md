@@ -147,10 +147,14 @@ CAPTCHA_SECRET=[secret-key]
 // app/Providers/AppServiceProvider.php
 public function register(): void
 {
-    // Forzar esquema HTTPS
-    URL::forceScheme('https');
-
-    // Forzar host y esquema
-    URL::forceRootUrl('https://'.request()->header('x-forwarded-host'));
+    // Forzar url y esquema si se detecta un proxy
+    if(request()->header('x-forwarded-host') != null){
+        // Forzar esquema HTTPS
+        URL::forceScheme('https');
+    
+        // Forzar host y esquema
+        URL::forceRootUrl('https://'.request()->header('x-forwarded-host'));
+    }
+    
 }
 ```
