@@ -57,7 +57,7 @@ sudo chmod -R 765 storage bootstrap/cache/
 ```
 ## Permisos sqlite
 ```bash
-sudo chown -R $USER:www-data database && sudo chmod -R 775 database
+sudo chown -R $USER:www-data database && sudo chmod -R 765 database
 ```
 ## Laravel jetstream
 ```bash
