@@ -50,7 +50,10 @@ composer create-project laravel/laravel proyectogenial
 
 ## Permisos de directorio
 ```bash
-sudo chown -R $USER:www-data storage bootstrap/cache/ && sudo chmod -R 775 storage bootstrap/cache/
+sudo chown -R $USER:www-data ./
+sudo chmod -R 755 ./
+sudo chown -R $USER:www-data storage bootstrap/cache/
+sudo chmod -R 765 storage bootstrap/cache/
 ```
 ## Permisos sqlite
 ```bash
