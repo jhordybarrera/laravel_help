@@ -53,6 +53,7 @@ composer create-project laravel/laravel proyectogenial
 sudo chown -R $USER:www-data ./
 sudo chmod -R 755 ./
 sudo chown -R $USER:www-data storage bootstrap/cache/
+sudo chmod -R 755 public
 sudo chmod -R 765 storage bootstrap/cache/
 ```
 ## Permisos sqlite
