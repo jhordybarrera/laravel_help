@@ -56,16 +56,16 @@ Nunca se debe asignar permisos de escritura al usuario del servidor web sobre ar
 
 ```bash
 # 1. Tu usuario dueño del proyecto
-sudo chown -R $USER:$USER /var/www/mi_proyecto
+sudo chown -R $USER:$USER ./
 
 # 2. storage y bootstrap/cache con grupo www-data
-sudo chown -R $USER:www-data /var/www/mi_proyecto/storage
-sudo chown -R $USER:www-data /var/www/mi_proyecto/bootstrap/cache
+sudo chown -R $USER:www-data storage
+sudo chown -R $USER:www-data bootstrap/cache
 
 # 3. Permisos adecuados
-sudo chmod -R 755 /var/www/mi_proyecto
-sudo chmod -R 775 /var/www/mi_proyecto/storage
-sudo chmod -R 775 /var/www/mi_proyecto/bootstrap/cache
+sudo chmod -R 755 ./
+sudo chmod -R 775 storage
+sudo chmod -R 775 bootstrap/cache
 ```
 ## Permisos si utilizas base de datos sqlite
 ```bash
