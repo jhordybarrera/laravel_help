@@ -70,7 +70,7 @@ sudo chmod -R 775 /var/www/mi_proyecto/bootstrap/cache
 ## Permisos sqlite
 ```bash
 sudo chown -R $USER:www-data database
-sudo chmod 755 database
+sudo chmod 775 database
 sudo chmod 664 database/database.sqlite
 ```
 ## Laravel jetstream
