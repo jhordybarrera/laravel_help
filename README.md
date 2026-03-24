@@ -67,7 +67,7 @@ sudo chmod -R 755 /var/www/mi_proyecto
 sudo chmod -R 775 /var/www/mi_proyecto/storage
 sudo chmod -R 775 /var/www/mi_proyecto/bootstrap/cache
 ```
-## Permisos sqlite
+## Permisos si utilizas base de datos sqlite
 ```bash
 sudo chown -R $USER:www-data database
 sudo chmod 775 database
