@@ -49,15 +49,29 @@ composer create-project laravel/laravel proyectogenial
 ```
 
 ## Permisos de directorio
+
+Nunca se debe asignar permisos de escritura al usuario del servidor web sobre archivos de código, unicos directorios donde el usuario web debe tener permisos de escritura storage y bootstrap/cache
+
+**Reempla www-data con tu usuario de servidor web**
+
 ```bash
-sudo chown -R $USER:www-data ./
-sudo chmod -R 755 ./
-sudo chown -R $USER:www-data storage bootstrap/cache/
-sudo chmod -R 775 storage bootstrap/cache/
+# 1. Tu usuario dueño del proyecto
+sudo chown -R $USER:$USER /var/www/mi_proyecto
+
+# 2. storage y bootstrap/cache con grupo www-data
+sudo chown -R $USER:www-data /var/www/mi_proyecto/storage
+sudo chown -R $USER:www-data /var/www/mi_proyecto/bootstrap/cache
+
+# 3. Permisos adecuados
+sudo chmod -R 755 /var/www/mi_proyecto
+sudo chmod -R 775 /var/www/mi_proyecto/storage
+sudo chmod -R 775 /var/www/mi_proyecto/bootstrap/cache
 ```
 ## Permisos sqlite
 ```bash
-sudo chown -R $USER:www-data database && sudo chmod -R 775 database
+sudo chown -R $USER:www-data database
+sudo chmod 755 database
+sudo chmod 664 database/database.sqlite
 ```
 ## Laravel jetstream
 ```bash
